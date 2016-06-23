@@ -64,7 +64,7 @@ df<-subset(df,!is.na(df$value))
 # Plot our heatmap
 ggplot(df,aes(y=challenger,x=variable),na.rm=T)+
   geom_tile(aes(fill=value),color="white")+
-  geom_text(aes(label=percent(round(value,2))),size=2.5)+
+  geom_text(aes(label=percent(round(value,2))),size=3.5)+
   scale_fill_distiller("Win Rate",palette="BuGn",direction=1,labels=scales::percent)+
   scale_alpha(guide="none")+
   theme_bw()+
